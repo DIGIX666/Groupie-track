@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Artist Page - {{.Artist.Name}}</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <a href="/"><h1 href="/">Groupie Tracker</h1></a>
+  </div>
+
+  <!-- The flexible grid (content) -->
+  <div class="row">
+    <div class="main">
+      <h2 class="page-heading">{{.Artist.Name}}</h2>
+
+      <div class="flex-container artist-page-style" id="artist-container">
+
+        <div class="artist-page-card">
+          <div class="circle" id="artist-image" style="background-image: url('{{ .Artist.Image}} ');">
+            <div class="middle">
+            <div class="center"></div>
+          </div>
+          </div>
+        </div>
+        <div class="artist-page-card">
+          <span class="artist-page-info">Creation Date: </span><span id="creation-date"
+            class="artist-page-info-data">{{.Artist.CreationDate}}</span><br>
+          <span class="artist-page-info">First Album: </span><span id="first-album"
+            class="artist-page-info-data">{{.Artist.FirstAlbum}}</span id="firstAlbum"><br>
+          <span class="artist-page-info">Members: </span>
+          <ul id="members" class="artist-page-list">
+            {{range .Artist.Members}} <li>{{ . }}</li> {{end}}
+          </ul>
+        </div>
+
+      </div>
+
+
+      <h2 class="page-heading">Latest Concerts</h2>
+
+      <div class="flex-container artist-page-style">
+
+        {{range $key, $value := .DatesLocations}}
+        <div class="artist-page-card">
+          <span class="artist-page-info"> {{ $key }} </span>
+          <div class="artist-page-concert">
+            {{range $value}} <span>{{ . }}</span><br> {{end}}
+          </div>
+        </div>
+          {{else}} <span class="artist-page-info"> No Concerts </span>
+       
+        {{end}}
+
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

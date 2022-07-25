@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+  * {
+    margin: auto;
+  }
+
+  body {
+      font-family: 'Bebas Neue', Verdana;
+  }
+
+  .header {
+      width: 30%;
+      height: 100px;
+      margin-top: 50px;
+      text-align: center;
+  }
+
+  .header a {
+      text-decoration: none;
+      color: black;
+  }
+
+  h1 {
+    -webkit-box-shadow: 0px 20px 0px -10px #FFFFFF, 0px -20px 0px -10px #FFFFFF, 20px 0px 0px -10px #FFFFFF, -20px 0px 0px -10px #FFFFFF, 0px 0px 0px 10px #FF0000, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 0px 20px 0px -10px #FFFFFF, 0px -20px 0px -10px #FFFFFF, 20px 0px 0px -10px #FFFFFF, -20px 0px 0px -10px #FFFFFF, 0px 0px 0px 10px #FF0000, 5px 5px 15px 5px rgba(0,0,0,0);
+  }
+
+  .circle 
+  {
+      /* background-color: #fff;
+      background-image: url("");
+      background-position: center;
+      box-shadow: 5px 5px 10px black;
+      width: 100%;
+      padding: 20px;
+      height:200px; 
+      width: 200px;
+      border-radius: 400px; */
+      display: inline-block;
+      box-shadow: 5px 5px 10px black;
+      padding: 100px;
+      background-image: url("");
+      background-size: 100%; 
+  }
+
+  .middle 
+  {
+      padding: 5px;
+      background-color: rgba(0,0,0,0.8);
+  }
+
+  .center
+  {
+      padding: 10px;
+      background-color: #fff;
+      box-shadow: inset 3px 5px 5px grey;
+  }
+
+  .circle,
+  .middle,
+  .center 
+  {
+    border-radius: 50%;
+  }
+
+  .circle:hover 
+  {
+    -webkit-animation: spin 3.5s linear infinite;
+    -moz-animation: spin 3.5s linear infinite;
+    animation: spin 3.5s linear infinite;
+  }
+
+  @-webkit-keyframes spin{
+    100%{-webkit-transform: rotate(360deg);}
+  }
+  @-moz-keyframes spin{
+    100%{-webkit-transform: rotate(360deg);}
+  }
+  @keyframes spin{
+    100%{-webkit-transform: rotate(360deg);}
+  }
+
+
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .flex-container a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .artist-card {
+    margin: 10px 10px;
+    text-align: center;
+  }
+
+  .artist-info {
+    padding-top: 5px;
+    cursor: pointer;
+    width: 200px;
+    margin: 10px;
+  }
+
+  .artist-title
+  {
+    margin-left: 20px;
+  }
+
+  .page-heading {
+    text-align: center;
+  }
+
+  .artist-page-card {
+    margin: 50px;
+  }
+
+  .footer-bar {
+    text-align: center;
+    margin-top: 80px;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+  }

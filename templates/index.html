@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Groupie Tracker</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="../favicon.jpg">
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <a href="/"><h1>Groupie Tracker</h1></a>
+  </div>
+
+  <!-- The flexible grid (content) -->
+  <div class="row">
+    <div class="main">
+
+      <div class="flex-container" id="artist-container">
+
+        {{ range .}}
+        <div class="artist-card">
+          <a href="/artists?ID={{.ID}}">
+            <div class="circle" style="background-image: url(&quot;{{.Image}}&quot;);">
+              <div class="middle">
+                <div class="center"></div>
+              </div>
+            </div>
+            <div class="artist-info">
+              <span class="artist-title">{{.Name}}</span><br>
+            </div>
+          </a></div>
+          {{else}} <span> No Data Available</span>
+          {{end}}
+
+      </div>
+    </div>
+  </div>
+<footer class="footer-bar">©Zakch & Thox66</footer>
+</body>
+</html>
